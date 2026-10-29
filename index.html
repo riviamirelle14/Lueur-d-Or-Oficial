@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lueur d’Or | Moda feminina</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ABERTURA DA MARCA -->
+  <section id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+      <span class="splash-line"></span>
+      <h1>Lueur d’Or</h1>
+      <p>Elegância em cada estação.</p>
+      <span class="splash-line"></span>
+    </div>
+  </section>
+
+  <!-- LOJA -->
+  <main id="homeScreen" class="hidden">
+    <div class="announcement">
+      Lueur d’Or — Entre o brilho e a delicadeza, nasce Lueur d’Or.
+    </div>
+
+    <header class="navbar">
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu">☰</button>
+      <a href="#" class="brand" data-view="home">Lueur d’Or</a>
+
+      <div class="search-box">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Pesquisar roupas e coleções..." aria-label="Pesquisar roupas e coleções">
+      </div>
+
+      <nav class="nav-icons" aria-label="Navegação da loja">
+        <button id="accountBtn" type="button" title="Finalizar compra" aria-label="Finalizar compra">♙</button>
+        <button id="favoritesBtn" type="button" title="Favoritos" aria-label="Favoritos">♡ <span id="favoriteCount">0</span></button>
+        <button id="cartBtn" type="button" title="Carrinho" aria-label="Carrinho">♧ <span id="cartCount">0</span></button>
+      </nav>
+    </header>
+
+    <div id="menuPanel" class="menu-panel hidden">
+      <button type="button" data-view="home">Início</button>
+      <button type="button" data-view="verao">Verão</button>
+      <button type="button" data-view="outono">Outono</button>
+      <button type="button" data-view="primavera">Primavera</button>
+      <button type="button" data-view="inverno">Inverno</button>
+      <button type="button" data-view="favorites">Favoritos</button>
+      <button type="button" data-view="cart">Carrinho</button>
+      <button type="button" id="menuCheckout">Finalizar compra</button>
+    </div>
+
+    <!-- HOME -->
+    <section id="homeView" class="page-view">
+      <!-- CARROSSEL -->
+      <section class="hero-carousel" aria-label="Coleções em destaque">
+        <div class="carousel-track" id="carouselTrack">
+
+          <article class="carousel-slide active">
+            <img src="capa de verão.png" alt="Coleção Verão" onerror="this.style.display='none'">
+            <div class="slide-caption">
+              <span>COLEÇÃO 01</span>
+              <h2>VERÃO</h2>
+              <p>Onde o calor encontra a elegância.</p>
+              <button type="button" data-collection="verao" class="outline-btn">Descobrir coleção</button>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="outono.png" alt="Coleção Outono" onerror="this.style.display='none'">
+            <div class="slide-caption">
+              <span>COLEÇÃO 02</span>
+              <h2>OUTONO</h2>
+              <p>Tons acolhedores, beleza atemporal.</p>
+              <button type="button" data-collection="outono" class="outline-btn">Descobrir coleção</button>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="primavera.png" alt="Coleção Primavera" onerror="this.style.display='none'">
+            <div class="slide-caption">
+              <span>COLEÇÃO 03</span>
+              <h2>PRIMAVERA</h2>
+              <p>Leveza que floresce em cada detalhe.</p>
+              <button type="button" data-collection="primavera" class="outline-btn">Descobrir coleção</button>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="inverno.png" alt="Coleção Inverno" onerror="this.style.display='none'">
+            <div class="slide-caption">
+              <span>COLEÇÃO 04</span>
+              <h2>INVERNO</h2>
+              <p>Elegância em sua forma mais aconchegante.</p>
+              <button type="button" data-collection="inverno" class="outline-btn">Descobrir coleção</button>
+            </div>
+          </article>
+
+        </div>
+
+        <button class="carousel-arrow prev" id="prevSlide" type="button" aria-label="Imagem anterior">‹</button>
+        <button class="carousel-arrow next" id="nextSlide" type="button" aria-label="Próxima imagem">›</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </section>
+
+      <!-- COLEÇÕES -->
+      <section class="section-heading">
+        <span>DESCUBRA SEU ESTILO</span>
+        <h2>Nossas coleções</h2>
+        <p>Peças escolhidas para acompanhar você em todas as estações.</p>
+      </section>
+
+      <section class="collection-grid">
+        <button type="button" class="collection-tile" data-collection="verao">
+          <img src="capa de verão.png" alt="Verão" onerror="this.style.display='none'">
+          <span>Verão ↗</span>
+        </button>
+        <button type="button" class="collection-tile" data-collection="outono">
+          <img src="outono.png" alt="Outono" onerror="this.style.display='none'">
+          <span>Outono ↗</span>
+        </button>
+        <button type="button" class="collection-tile" data-collection="primavera">
+          <img src="primavera.png" alt="Primavera" onerror="this.style.display='none'">
+          <span>Primavera ↗</span>
+        </button>
+        <button type="button" class="collection-tile" data-collection="inverno">
+          <img src="inverno.png" alt="Inverno" onerror="this.style.display='none'">
+          <span>Inverno ↗</span>
+        </button>
+      </section>
+
+      <!-- PRODUTOS EM DESTAQUE -->
+      <section class="products-section">
+        <div class="section-heading">
+          <span>ESCOLHAS ESPECIAIS</span>
+          <h2>Peças em destaque</h2>
+        </div>
+        <div id="homeProducts" class="product-grid"></div>
+      </section>
+
+      <!-- SOBRE A MARCA -->
+      <section class="about-section">
+        <div>
+          <span>NOSSA ESSÊNCIA</span>
+          <h2>Sobre a Lueur d’Or</h2>
+        </div>
+        <p>
+          A Lueur d’Or nasceu para celebrar a beleza dos detalhes e a
+          elegância de cada mulher. Nossa proposta é unir delicadeza,
+          conforto e personalidade em coleções inspiradas nas estações
+          do ano. Acreditamos que vestir-se é uma forma de expressar
+          quem somos, com autenticidade e leveza.
+        </p>
+      </section>
+    </section>
+
+    <!-- PÁGINAS DE COLEÇÃO, FAVORITOS E CARRINHO -->
+    <section id="listingView" class="page-view hidden">
+      <div class="listing-header">
+        <button class="back-btn" id="backHome" type="button">← Voltar</button>
+        <span>NOSSA SELEÇÃO</span>
+        <h1 id="listingTitle">Coleção</h1>
+        <p id="listingDescription"></p>
+      </div>
+
+      <div id="listingProducts" class="product-grid"></div>
+      <p id="emptyMessage" class="empty-message hidden"></p>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <h2>Lueur d’Or</h2>
+      <p>Elegância em cada estação.</p>
+      <p>Contato: contato@lueurdor.com</p>
+      <p>© 2026 Lueur d’Or. Todos os direitos reservados.</p>
+    </footer>
+  </main>
+
+  <!-- FINALIZAÇÃO DA COMPRA -->
+  <section id="checkoutScreen" class="checkout-screen hidden" aria-labelledby="checkoutTitle">
+    <div class="checkout-card">
+      <button id="closeCheckout" class="back-btn" type="button">← Voltar à loja</button>
+
+      <p class="checkout-eyebrow">LUEUR D’OR</p>
+      <h2 id="checkoutTitle">Dados para entrega</h2>
+      <p class="checkout-description">
+        Preencha os dados abaixo para continuar com a demonstração do pedido.
+      </p>
+
+      <form id="checkoutForm">
+        <label for="customerNumber">Número do cliente</label>
+        <input id="customerNumber" name="customerNumber" type="text" placeholder="Número do cliente" autocomplete="off" required>
+
+        <label for="customerName">Nome completo</label>
+        <input id="customerName" name="customerName" type="text" placeholder="Nome completo" autocomplete="name" required>
+
+        <label for="customerCpf">CPF</label>
+        <input id="customerCpf" name="customerCpf" type="text" inputmode="numeric" placeholder="Digite seu CPF" maxlength="14" autocomplete="off" required>
+
+        <label for="customerEmail">E-mail</label>
+        <input id="customerEmail" name="customerEmail" type="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+
+        <label for="customerPhone">Telefone</label>
+        <input id="customerPhone" name="customerPhone" type="tel" placeholder="(00) 00000-0000" autocomplete="tel" required>
+
+        <label for="customerStreet">Rua, número e complemento</label>
+        <input id="customerStreet" name="customerStreet" type="text" placeholder="Rua, número e complemento" autocomplete="street-address" required>
+
+        <div class="checkout-fields-row">
+          <div>
+            <label for="customerCity">Cidade</label>
+            <input id="customerCity" name="customerCity" type="text" placeholder="Cidade" autocomplete="address-level2" required>
+          </div>
+          <div>
+            <label for="customerState">Estado (UF)</label>
+            <input id="customerState" name="customerState" type="text" placeholder="RN" maxlength="2" autocomplete="address-level1" required>
+          </div>
+        </div>
+
+        <p id="checkoutMessage" class="message" role="status" aria-live="polite"></p>
+
+        <p class="demo-notice">
+          <strong>Modo de demonstração:</strong> este formulário não envia dados,
+          não registra pedidos e não realiza pagamentos reais.
+        </p>
+
+        <button class="primary-btn" type="submit">Confirmar dados do pedido</button>
+      </form>
+
+      <div id="orderSuccess" class="success-box hidden" role="status" aria-live="polite">
+        <h3>Dados preenchidos!</h3>
+        <p id="orderSuccessMessage"></p>
+        <button id="finishOrder" class="primary-btn" type="button">Voltar à loja</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENSAGENS -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
